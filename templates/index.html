@@ -27,7 +27,7 @@
             <div class="blog__slide__img">
               <img class="card-img rounded-0"
                 src="{% if post.image_url %}{{ post.image_url }}{% else %}{% static 'img/banner/blog.png' %}{% endif %}"
-                alt="">
+                alt="{{ post.title }}">
             </div>
             <div class="blog__slide__content">
               <h3><a href="post/{{post.slug}}">{{ post.title }}</a></h3>
@@ -53,7 +53,7 @@
             <div class="thumb">
               <img class="img-fluid"
                 src="{% if post.image_url %}{{ post.image_url }}{% else %}{% static 'img/banner/blog.png' %}{% endif %}"
-                alt="">
+                alt="{{ post.title }}">
               <ul class="thumb-info" style="max-width: 550px">
                 <li><a href="#"><i class="ti-user"></i>{{ post.author}}</a></li>
                 <li><a href="#"><i class="ti-notepad"></i>{{ post.published_at }}</a></li>
